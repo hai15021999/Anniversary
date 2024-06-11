@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Kablammo";
+  /*a name to be used later*/
+  src: url("./styles/font-styles/Kablammo-Regular-VariableFont_MORF.ttf");
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: "MoiraiOneForn";
+  /*a name to be used later*/
+  src: url("./styles/font-styles/MoiraiOne-Regular.ttf");
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: "DancingScript";
+  /*a name to be used later*/
+  src: url("./styles/font-styles/DancingScript-VariableFont_wght.ttf");
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: "Gluten";
+  /*a name to be used later*/
+  src: url("./styles/font-styles/Gluten-VariableFont_slnt\,wght.ttf");
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: "SansitaSwashed";
+  /*a name to be used later*/
+  src: url("./styles/font-styles/SansitaSwashed-VariableFont_wght.ttf");
+  /*URL to font*/
+}
+
+.App {
+  text-align: center;
+  background: url("./assets/layout.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #604242;
+  z-index: 1;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.__app-background-shape-left {
+  position: fixed;
+  pointer-events: none;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(45deg);
+  opacity: 0.1;
+  top: -15vmin;
+  left: -15vmin;
+  min-width: 75vmin;
+  min-height: 75vmin;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  margin-top: 10px;
+  /* Leave some space above */
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 52px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  /* Make the top edge round */
+  transform: rotate(-45deg);
+  /* Rotate it counter-clockwise */
+  transform-origin: 0 100%;
+  /* Rotate around the bottom-left corner */
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Place the right part properly */
+  width: 52px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(45deg);
+  /* Rotate 45 degrees clockwise */
+  transform-origin: 100% 100%;
+  /* Rotate around the bottom-right corner */
+}
+
+.center_heart {
+  z-index: 5;
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  opacity: 0.5;
+  margin-top: 15px;
+}
+
+.center_heart::before {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 150px;
+  width: 158px;
+  height: 240px;
+  background: red;
+  border-radius: 45% 60% 50% 0px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.center_heart::after {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -5px;
+  width: 156px;
+  height: 240px;
+  background: red;
+  border-radius: 60% 45% 0 50%;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.message {
+  font-family: "DancingScript";
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+}
