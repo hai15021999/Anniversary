@@ -21,7 +21,7 @@ function App() {
     setInterval(() => {
       const currentDate = new Date();
       const diff = currentDate.getTime() - startDate.getTime();
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
       setAnniversaryDate(days);
     }, 1000);
   }
