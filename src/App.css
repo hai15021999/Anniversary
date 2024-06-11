@@ -67,7 +67,10 @@
   width: 100px;
   height: 90px;
   margin-top: 10px;
-  /* Leave some space above */
+}
+
+.center_heart:hover {
+  transform: scale(1.1);
 }
 
 .heart::before {
